@@ -1,0 +1,7 @@
+{
+  "files.exclude": {
+    "src/react-app-env.d.ts": true
+  },
+  "editor.tabSize": 2,
+  "editor.formatOnSave": true
+}
