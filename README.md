@@ -11,5 +11,6 @@ npm install @dgautalius/react-helpers --save
 ## Usage
 
 ```
+import { createContextWithHook } from '@dgautalius/react-helpers';
 export const [MyContext, useMyContext] = createContextWithHook('MyContext');
 ```
