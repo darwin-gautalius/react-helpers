@@ -1,11 +1,11 @@
-# React Helpers
+# React Libs
 
 A collection of simple helpers to make life easier.
 
 ## How to install:
 
 ```
-npm install react-helpers --save
+npm install react-libs --save
 ```
 
 ## Usage
