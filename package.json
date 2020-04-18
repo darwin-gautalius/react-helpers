@@ -29,8 +29,9 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "build:library": "rm -rf lib && tsc --p tsconfig.library.json && node create-package-json.js",
-    "publish:library": "",
+    "library:build": "rm -rf lib && tsc --p tsconfig.library.json && node create-package-json.js",
+    "library:publish": "cd lib && npm publish",
+    "library:build-publish": "npm run library:build && npm run library:publish",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
