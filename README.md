@@ -5,7 +5,7 @@ A collection of simple helpers to make life easier.
 ## How to install:
 
 ```
-npm install react-libs --save
+npm install @dgautalius/react-helpers --save
 ```
 
 ## Usage
