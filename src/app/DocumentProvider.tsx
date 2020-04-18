@@ -1,6 +1,6 @@
 import React, { FC, useState } from 'react';
 
-import { createContextWithHook } from '../helpers';
+import { createContextWithHook } from '../libs';
 
 import { MenuGroup, MenuItem } from './ui/MenuBar';
 import { useSnackbar } from './ui/Snackbar';
@@ -12,18 +12,26 @@ export const [DocumentContext, useDocument] = createContextWithHook<Document | n
 export const DocumentProvider: FC = ({ children }) => {
   const [document, setDocument] = useState<Document | null>(null);
   const showSnackbar = useSnackbar();
-  const handleOpen = () => {
-    const type = Math.random() > 0.5 ? 'text' : 'image';
-    setDocument({ type });
-    showSnackbar({ message: `opened ${type} document!` });
+
+  const handleOpenText = () => {
+    setDocument({ type: 'text' });
+    showSnackbar({ message: 'opened text document!' });
   };
+
+  const handleOpenImage = () => {
+    setDocument({ type: 'image' });
+    showSnackbar({ message: 'opened image document!' });
+  };
+
   const handleExport = () => {
     showSnackbar({ message: 'exported!' });
   };
+
   return (
     <DocumentContext.Provider value={document}>
       <MenuGroup name="File">
-        <MenuItem onClick={handleOpen}>Open</MenuItem>
+        <MenuItem onClick={handleOpenText}>Open Text</MenuItem>
+        <MenuItem onClick={handleOpenImage}>Open Image</MenuItem>
         {document && <MenuItem onClick={handleExport}>Export Document</MenuItem>}
       </MenuGroup>
       {children}

@@ -1,10 +1,10 @@
 {
-  "name": "react-helpers",
+  "name": "react-libs",
   "author": {
     "name": "Darwin Gautalius",
     "email": "darwin.gautalius@live.com"
   },
-  "version": "0.1.0",
+  "version": "0.0.1",
   "dependencies": {
     "@material-ui/core": "^4.9.10",
     "react": "^16.13.1",
@@ -24,7 +24,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/darwin-gautalius/react-helpers.git"
+    "url": "https://github.com/darwin-gautalius/react-libs.git"
   },
   "scripts": {
     "start": "react-scripts start",
