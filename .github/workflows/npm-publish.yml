@@ -17,6 +17,7 @@ jobs:
         with:
           node-version: 12
           registry-url: https://registry.npmjs.org/
+      - run: npm ci
       - run: npm run library:build
       - run: npm run library:publish
         env:
@@ -30,6 +31,7 @@ jobs:
         with:
           node-version: 12
           registry-url: https://npm.pkg.github.com/
+      - run: npm ci
       - run: npm run library:build
       - run: npm run library:publish
         env:
