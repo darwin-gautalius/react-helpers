@@ -18,8 +18,8 @@ jobs:
           node-version: 12
           registry-url: https://registry.npmjs.org/
       - run: npm ci
-      - run: npm run library:build
-      - run: npm run library:publish
+      - run: npm run maid:build
+      - run: npm run maid:publish
         env:
           NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
 
@@ -32,7 +32,7 @@ jobs:
           node-version: 12
           registry-url: https://npm.pkg.github.com/
       - run: npm ci
-      - run: npm run library:build
-      - run: npm run library:publish
+      - run: npm run maid:build
+      - run: npm run maid:publish
         env:
           NODE_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN}}

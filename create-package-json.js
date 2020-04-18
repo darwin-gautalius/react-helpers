@@ -15,6 +15,6 @@ const libraryPackageJson = {
 }
 
 require('fs').writeFileSync(
-  'lib/package.json',
+  'maid/package.json',
   JSON.stringify(libraryPackageJson, null, 2)
 );

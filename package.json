@@ -1,5 +1,5 @@
 {
-  "name": "@dgautalius/react-helpers",
+  "name": "react-maid",
   "author": {
     "name": "Darwin Gautalius",
     "email": "darwin.gautalius@live.com"
@@ -29,9 +29,9 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "library:build": "rm -rf lib && tsc --p tsconfig.library.json && node create-package-json.js",
-    "library:publish": "cd lib && npm publish --access public",
-    "library:build-publish": "npm run library:build && npm run library:publish",
+    "maid:build": "rm -rf maid && tsc --p tsconfig.maid.json && node create-package-json.js",
+    "maid:publish": "cd maid && npm publish --access public",
+    "maid:build-publish": "npm run maid:build && npm run maid:publish",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },

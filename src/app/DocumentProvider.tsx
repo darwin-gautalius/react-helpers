@@ -1,6 +1,6 @@
 import React, { FC, useState } from 'react';
 
-import { createContextWithHook } from '../libs';
+import { createContextWithHook } from '../maid';
 
 import { MenuGroup, MenuItem } from './ui/MenuBar';
 import { useSnackbar } from './ui/Snackbar';

@@ -11,8 +11,8 @@
 # production
 /build
 
-# lib
-/lib
+# maid
+/maid
 
 # misc
 .DS_Store
