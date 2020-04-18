@@ -1,4 +1,4 @@
-# React Libs
+# React Helpers
 
 A collection of simple helpers to make life easier.
 

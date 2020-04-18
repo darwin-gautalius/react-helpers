@@ -1,5 +1,5 @@
 {
-  "name": "react-libs",
+  "name": "@dgautalius/react-helpers",
   "author": {
     "name": "Darwin Gautalius",
     "email": "darwin.gautalius@live.com"
@@ -30,7 +30,7 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "library:build": "rm -rf lib && tsc --p tsconfig.library.json && node create-package-json.js",
-    "library:publish": "cd lib && npm publish",
+    "library:publish": "cd lib && npm publish --access public",
     "library:build-publish": "npm run library:build && npm run library:publish",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
