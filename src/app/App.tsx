@@ -1,11 +1,12 @@
 import { Box } from '@material-ui/core';
 import React, { FC } from 'react';
 
-import { MenuBar, MenuBarProvider } from './MenuBar';
+import { MenuBar, MenuBarProvider } from './ui/MenuBar';
+import { SnackbarProvider } from './ui/Snackbar';
+
 import { ActionManager } from './ActionManager';
 import { DocumentProvider } from './DocumentProvider';
 import { DocumentViewer } from './DocumentViewer';
-import { SnackbarProvider } from './Snackbar';
 
 export const App: FC = () => {
   return (

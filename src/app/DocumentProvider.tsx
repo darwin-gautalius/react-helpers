@@ -1,8 +1,9 @@
 import React, { FC, useState } from 'react';
+
 import { createContextWithHook } from '../helpers';
 
-import { MenuGroup, MenuItem } from './MenuBar';
-import { useSnackbar } from './Snackbar';
+import { MenuGroup, MenuItem } from './ui/MenuBar';
+import { useSnackbar } from './ui/Snackbar';
 
 type Document = { type: string; };
 

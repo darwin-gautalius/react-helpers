@@ -1,7 +1,9 @@
 import React, { FC } from 'react';
-import { MenuGroup, MenuItem } from './MenuBar';
+
+import { MenuGroup, MenuItem } from './ui/MenuBar';
+import { useSnackbar } from './ui/Snackbar';
+
 import { useDocument } from './DocumentProvider';
-import { useSnackbar } from './Snackbar';
 
 export const ActionManager: FC = ({ children }) => {
   const document = useDocument();

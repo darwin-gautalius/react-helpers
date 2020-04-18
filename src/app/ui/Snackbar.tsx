@@ -1,7 +1,7 @@
 import Snackbar, { SnackbarProps, SnackbarCloseReason } from '@material-ui/core/Snackbar';
 import React, { FC, useState, SyntheticEvent } from 'react';
 
-import { createContextWithHook } from '../helpers';
+import { createContextWithHook } from '../../helpers';
 
 const DEFAULT_SNACKBAR_WAIT = 6000;
 type CloseFn = (event: SyntheticEvent<any, Event>, reason: SnackbarCloseReason) => void;

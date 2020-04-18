@@ -1,8 +1,10 @@
 import { Box } from '@material-ui/core';
 import React, { FC } from 'react';
+
+import { MenuGroup, MenuItem } from './ui/MenuBar';
+import { useSnackbar } from './ui/Snackbar';
+
 import { useDocument } from './DocumentProvider';
-import { MenuGroup, MenuItem } from './MenuBar';
-import { useSnackbar } from './Snackbar';
 
 export const DocumentViewer: FC = () => {
   const document = useDocument();

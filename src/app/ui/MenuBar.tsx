@@ -1,7 +1,6 @@
 import { AppBar, Box, Button, ClickAwayListener, Grow, MenuList, MenuItem, Paper, Popper } from '@material-ui/core';
 import React, { FC } from 'react';
-
-import { createContextualPortal } from '../helpers';
+import { createContextualPortal } from '../../helpers';
 
 export {
   MenuBarPortalProvider as MenuBarProvider,
