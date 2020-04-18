@@ -1,2 +1,3 @@
-export * from './createContextWithHook';
-export * from './createContextualPortal';
+export * from './factories/createContextWithHook';
+export * from './factories/createContextualPortal';
+export * from './hooks/useRefresh';

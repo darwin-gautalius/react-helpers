@@ -2,7 +2,7 @@ import React, { FC, HTMLProps, memo, MutableRefObject, useRef, useEffect } from 
 import { createPortal } from 'react-dom';
 
 import { createContextWithHook } from './createContextWithHook';
-import { useRefresh } from './hooks/useRefresh';
+import { useRefresh } from '../hooks/useRefresh';
 
 interface PortalContext {
   ref: MutableRefObject<HTMLDivElement | null>;
