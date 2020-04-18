@@ -5,6 +5,7 @@ const libraryPackageJson = {
   author,
   version,
   repository,
+  main: 'index.js',
   dependencies: Object.entries(dependencies)
     .reduce((result, [key, value]) => {
       if (!devDependencies[key]) {
