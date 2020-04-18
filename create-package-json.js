@@ -1,9 +1,10 @@
-const { name, author, version, dependencies, devDependencies } = require('./package.json');
+const { name, author, version, repository, dependencies, devDependencies } = require('./package.json');
 
 const libraryPackageJson = {
   name,
   author,
   version,
+  repository,
   dependencies: Object.entries(dependencies)
     .reduce((result, [key, value]) => {
       if (!devDependencies[key]) {
