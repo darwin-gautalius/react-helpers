@@ -1,6 +1,5 @@
-import { useCallback, useState } from 'react';
+import { useCounter } from './useCounter';
 
 export function useRefresh() {
-  const [, setValue] = useState(0);
-  return useCallback(() => setValue(value => ++value), []);
+  return useCounter()[1];
 }
