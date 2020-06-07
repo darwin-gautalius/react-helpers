@@ -4,7 +4,7 @@
     "name": "Darwin Gautalius",
     "email": "darwin.gautalius@live.com"
   },
-  "version": "0.0.2",
+  "version": "0.0.3",
   "dependencies": {
     "@material-ui/core": "^4.9.10",
     "react": "^16.13.1",
@@ -35,6 +35,7 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
+  "sideEffects": false,
   "eslintConfig": {
     "extends": "react-app"
   },
