@@ -1,17 +1,27 @@
-import React, { FC, HTMLProps, memo, MutableRefObject, useRef, useEffect } from 'react';
-import { createPortal } from 'react-dom';
+import React, {
+  FC,
+  HTMLProps,
+  memo,
+  MutableRefObject,
+  useRef,
+  useEffect,
+} from "react";
+import { createPortal } from "react-dom";
 
-import { createContextWithHook } from './createContextWithHook';
-import { useRefresh } from '../hooks/useRefresh';
+import { createContextWithHook } from "./createContextWithHook";
+import { useRefresh } from "../hooks/useRefresh";
 
 interface PortalContext {
   ref: MutableRefObject<HTMLDivElement | null>;
   refresh: () => void;
 }
 
-export function createContextualPortal<T = {}>(name: string):
-  [FC<T>, FC<HTMLProps<HTMLDivElement>>, FC, () => PortalContext & T] {
-  const [PortalContext, usePortal] = createContextWithHook<PortalContext & T>(name);
+export function createContextualPortal<T = {}>(
+  name: string
+): [FC<T>, FC<HTMLProps<HTMLDivElement>>, FC, () => PortalContext & T] {
+  const [PortalContext, usePortal] = createContextWithHook<PortalContext & T>(
+    name
+  );
 
   const PortalProvider: FC<T> = ({ children, ...extra }) => {
     const refresh = useRefresh();
@@ -23,14 +33,14 @@ export function createContextualPortal<T = {}>(name: string):
     );
   };
 
-  const PortalPlaceholder = memo<HTMLProps<HTMLDivElement>>(() => {
+  const PortalPlaceholder = memo<HTMLProps<HTMLDivElement>>((props) => {
     const { refresh, ref } = usePortal();
     useEffect(() => {
       refresh();
       return () => refresh();
     }, [refresh]);
 
-    return <div ref={ref} />;
+    return <div ref={ref} {...props} />;
   });
 
   const PortalGate: FC = ({ children }) => {
@@ -44,4 +54,3 @@ export function createContextualPortal<T = {}>(name: string):
 
   return [PortalProvider, PortalPlaceholder, PortalGate, usePortal];
 }
-
